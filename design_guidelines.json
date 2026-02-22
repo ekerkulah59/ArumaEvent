@@ -1,0 +1,167 @@
+{
+  "identity": {
+    "persona": "E1",
+    "mission": "Create a top 1% service-based website that blends modern minimalism with organic warmth. Avoid generic 'SaaS' looks.",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is King",
+      "Zoom in",
+      "Negative Space",
+      "Contrast"
+    ]
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "usage": "Use for all H1, H2, H3. Create editorial tension with large sizes.",
+      "weights": ["400", "600", "700"],
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "usage": "Use for paragraphs, UI elements, buttons.",
+      "weights": ["300", "400", "500", "600"],
+      "letter_spacing": "tracking-normal"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#FAFAF9",
+      "foreground": "#1A1A1A",
+      "primary": "#8DA399",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#E5E5E0",
+      "secondary_foreground": "#1A1A1A",
+      "accent": "#D4AF37",
+      "accent_foreground": "#FFFFFF",
+      "muted": "#F0F0EB",
+      "muted_foreground": "#64748B",
+      "border": "#E2E2DF",
+      "input": "#E2E2DF"
+    },
+    "usage": {
+      "background": "Main page background. Avoid pure white #FFFFFF.",
+      "primary": "Main CTAs, active states, key icons.",
+      "accent": "Subtle highlights, badges, premium indicators.",
+      "text": "Use #1A1A1A for headings, #4A4A4A for body. Never pure black."
+    }
+  },
+  "layout": {
+    "spacing": {
+      "base": "Use 2-3x more spacing than typical. Minimum section padding: py-20 or py-24.",
+      "container": "max-w-7xl mx-auto px-6 md:px-12"
+    },
+    "grids": {
+      "marketing": "Use 'Tetris' grid (asymmetric col-span) for galleries and feature showcases.",
+      "catalog": "Use clean 3-4 column grid (gap-8) for rental products.",
+      "detail": "Asymmetric 2-column: 60% image / 40% content sticky scroll."
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped (rounded-full).",
+      "primary": "bg-[#8DA399] text-white hover:bg-[#7A8F85] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "secondary": "bg-transparent border border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white transition-all duration-300"
+    },
+    "cards": {
+      "style": "Minimalist. No visible border by default. Subtle bg-white/50 hover:bg-white transition-all duration-300.",
+      "hover": "Scale image slightly (1.05) on hover. Shadow-lg on hover."
+    },
+    "navigation": {
+      "style": "Floating 'Glass' pill. Fixed at top, centered or full width with padding.",
+      "classes": "bg-white/70 backdrop-blur-md border border-white/20 shadow-sm rounded-full px-8 py-4 mt-4 mx-auto max-w-5xl z-50"
+    },
+    "inputs": {
+      "style": "Minimalist underline or soft background.",
+      "classes": "bg-white border-gray-200 focus:border-[#8DA399] focus:ring-[#8DA399] rounded-md"
+    }
+  },
+  "visual_enhancers": {
+    "texture": "Add a subtle noise texture overlay (opacity 0.03) to the entire body to kill digital flatness.",
+    "motion": {
+      "scroll": "Use 'lenis' for smooth scrolling.",
+      "reveal": "Use framer-motion for staggered entrance of grid items.",
+      "interaction": "All interactive elements must have a hover state (scale, color shift, or shadow)."
+    },
+    "glassmorphism": "Use for overlays, sticky headers, and toast notifications. backdrop-blur-xl bg-white/60."
+  },
+  "images": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1768777270907-235286662f98?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMHJlY2VwdGlvbiUyMHRhYmxlJTIwc2V0dGluZ3xlbnwwfHx8fDE3NzAxNzk4NDN8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Elegant wedding table setting with floral arrangement",
+        "category": "hero"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1768777270882-9f74939fee50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxlbGVnYW50JTIwd2VkZGluZyUyMHJlY2VwdGlvbiUyMHRhYmxlJTIwc2V0dGluZ3xlbnwwfHx8fDE3NzAxNzk4NDN8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Sunset wedding reception overlooking city",
+        "category": "hero"
+      }
+    ],
+    "services": [
+      {
+        "url": "https://images.unsplash.com/photo-1758285477208-2300ae0c668d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBldmVudCUyMGRlY29yYXRpb258ZW58MHx8fHwxNzcwMTc5ODQ1fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Modern corporate event atrium",
+        "category": "corporate"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758870041148-31d28fdf34d9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwYmlydGhkYXklMjBiYWxsb29uJTIwYXJjaCUyMGRlY29yYXRpb258ZW58MHx8fHwxNzcwMTc5ODg2fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Elegant birthday balloon decoration",
+        "category": "birthday"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1761110840708-9d6814876068?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwd2VkZGluZyUyMHJlY2VwdGlvbiUyMHRhYmxlJTIwc2V0dGluZ3xlbnwwfHx8fDE3NzAxNzk4NDN8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Wedding details gold trim",
+        "category": "wedding"
+      }
+    ],
+    "rentals": [
+      {
+        "url": "https://images.unsplash.com/photo-1603920354140-cab69c15e672?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxydXN0aWMlMjB3b29kZW4lMjBldmVudCUyMHRhYmxlc3xlbnwwfHx8fDE3NzAxNzk4NTJ8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Rustic wooden table detail",
+        "category": "tables"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1680169256615-19edb85cb7db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwzfHxydXN0aWMlMjB3b29kZW4lMjBldmVudCUyMHRhYmxlc3xlbnwwfHx8fDE3NzAxNzk4NTJ8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Wooden chairs row",
+        "category": "chairs"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1766086893043-d38b06175015?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxwaG90byUyMGJvb3RoJTIwZXZlbnQlMjBwYXJ0eXxlbnwwfHx8fDE3NzAxNzk4NTd8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Photo booth bus with people",
+        "category": "photobooth"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1768725847223-8407142e653a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxjYXRlcmluZyUyMGNoYWZpbmclMjBkaXNoJTIwYnVmZmV0JTIwc2V0dXB8ZW58MHx8fHwxNzcwMTc5ODgxfDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Catering buffet setup",
+        "category": "catering"
+      }
+    ]
+  },
+  "instructions_to_main_agent": {
+    "general": "You are building a high-end event decoration website. It must feel expensive but approachable. Use the 'Organic & Earthy' theme.",
+    "setup": [
+      "Install 'lenis' for smooth scrolling immediately.",
+      "Install 'framer-motion' for animations.",
+      "Install 'lucide-react' for icons.",
+      "Configure Tailwind with the provided colors and fonts."
+    ],
+    "pages": {
+      "home": "Hero section must be immersive. Use a 'Tetris' grid for the 'Featured Services' section. Include a testimonial slider.",
+      "services": "List categories with large, high-quality images. Hovering over a category should reveal more details.",
+      "rentals": "E-commerce style grid. Clean, white space. Filters on the left or top.",
+      "detail_page": "Split layout. Left side: Sticky image gallery. Right side: Scrollable details and 'Request Quote' form.",
+      "contact": "Simple, elegant form. Use Shadcn Form component but style it to match the brand (minimalist)."
+    }
+  },
+  "universal_guidelines": [
+    "Do not use generic 'SaaS Blue' colors.",
+    "Do not use 'Inter' font for headings.",
+    "Do not center-align everything.",
+    "Always add hover states to interactive elements.",
+    "Use 'data-testid' for all interactive elements.",
+    "Ensure high contrast for text accessibility.",
+    "Mobile-first responsive design is mandatory."
+  ]
+}
