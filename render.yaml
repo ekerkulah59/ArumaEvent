@@ -1,0 +1,34 @@
+# Render Blueprint - Deploy both services from Dashboard > New > Blueprint
+# Add environment variables in the Render Dashboard after first deploy
+
+services:
+  - type: web
+    name: even-backend
+    runtime: python
+    region: oregon
+
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+
+    rootDir: backend
+
+    envVars:
+      - key: RESEND_API_KEY
+        sync: false  # Add manually in Dashboard
+      - key: QUOTE_RECIPIENT_EMAIL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false  # Set to your frontend URL after deploy
+
+  - type: web
+    name: even-frontend
+    runtime: static
+
+    buildCommand: npm install && npm run build
+    staticPublishPath: frontend/build
+
+    rootDir: frontend
+
+    envVars:
+      - key: REACT_APP_BACKEND_URL
+        sync: false  # Set to https://even-backend-xxxx.onrender.com
