@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 const ContactPage = () => {
   const contactItems = [
@@ -28,6 +29,11 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="contact-page">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Aruma Events. Visit us in Magnolia, Delaware, or call and email for quotes and event planning."
+        path="/contact"
+      />
       <section className="section-padding bg-muted">
         <div className="container-custom">
           <motion.div

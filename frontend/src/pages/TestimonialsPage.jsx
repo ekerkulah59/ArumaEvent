@@ -2,11 +2,17 @@ import { motion } from 'framer-motion';
 import TestimonialCard from '../components/TestimonialCard';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 import { testimonials } from '../data/staticData';
 
 const TestimonialsPage = () => {
   return (
     <div className="min-h-screen pt-24" data-testid="testimonials-page">
+      <SEO
+        title="Testimonials"
+        description="Read what couples, families, and companies say about Aruma Events. Real reviews from real celebrations."
+        path="/testimonials"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">

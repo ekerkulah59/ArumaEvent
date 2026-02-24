@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Handshake, Star, Check, Utensils, Camera, Tent, Sofa, Sparkles, Home } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 
 const AboutPage = () => {
   const services = [
@@ -22,6 +23,11 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="about-page">
+      <SEO
+        title="About Us"
+        description="Meet Aruma Events — your Delaware event rental and décor partner. We bring quality tents, seating, photo booths, and custom design to every celebration."
+        path="/about"
+      />
       {/* Hero */}
       <section className="section-padding bg-muted">
         <div className="container-custom">

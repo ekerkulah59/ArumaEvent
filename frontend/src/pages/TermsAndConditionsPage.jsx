@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FileText } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 
 const termsSections = [
   {
@@ -79,6 +80,11 @@ const termsSections = [
 const TermsAndConditionsPage = () => {
   return (
     <div className="min-h-screen pt-24" data-testid="terms-page">
+      <SEO
+        title="Terms &amp; Conditions"
+        description="Aruma Events terms and conditions: booking, payment, cancellation, rentals, and liability."
+        path="/terms-and-conditions"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">

@@ -5,6 +5,7 @@ import { ShoppingBag } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import QuoteForm from '../components/QuoteForm';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 
 const CheckoutPage = () => {
   const { items, clearCart, count } = useCart();
@@ -29,6 +30,7 @@ const CheckoutPage = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-24" data-testid="checkout-page">
+      <SEO title="Checkout" path="/cart/checkout" noindex />
       <div className="container-custom py-12">
         <motion.div
           initial={{ opacity: 0, y: 10 }}

@@ -4,6 +4,7 @@ import { ShoppingBag, Minus, Plus, Trash2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
+import SEO from '../components/SEO';
 
 const CartPage = () => {
   const { items, updateQuantity, removeItem } = useCart();
@@ -11,6 +12,7 @@ const CartPage = () => {
   if (items.length === 0) {
     return (
       <div className="min-h-screen pt-24 pb-24" data-testid="cart-page">
+        <SEO title="Cart" path="/cart" noindex />
         <div className="container-custom py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -46,6 +48,7 @@ const CartPage = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-24" data-testid="cart-page">
+      <SEO title="Cart" path="/cart" noindex />
       <div className="container-custom py-12">
         <motion.div
           initial={{ opacity: 0, y: 10 }}

@@ -5,6 +5,7 @@ import { Filter } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { serviceCategoryLabels } from '../lib/utils';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 import { services } from '../data/staticData';
 
 const ServicesPage = () => {
@@ -32,6 +33,11 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="services-page">
+      <SEO
+        title="Event Décor Services"
+        description="Wedding décor, corporate events, birthdays, baby showers, and more. Custom event design and full-service décor from Aruma Events."
+        path="/services"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">

@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { formatDate } from '../lib/utils';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 import { blogPosts } from '../data/staticData';
 
 const BlogDetailPage = () => {
@@ -25,6 +26,12 @@ const BlogDetailPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="blog-detail-page">
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        image={post.cover_image}
+        path={`/blog/${post.slug}`}
+      />
       <div className="relative h-[40vh] md:h-[50vh]">
         <img
           src={post.cover_image}

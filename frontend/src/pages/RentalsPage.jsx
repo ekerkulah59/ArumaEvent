@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Filter } from 'lucide-react';
 import RentalCard from '../components/RentalCard';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 import { inventory, categories } from '../data/staticData';
 
 const RentalsPage = () => {
@@ -31,6 +32,11 @@ const RentalsPage = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-12 overflow-x-hidden" data-testid="rentals-page">
+      <SEO
+        title="Event Rentals — Tents, Chairs, Tables, Photo Booths"
+        description="Rent tents, tables, chairs, photo booths, and catering equipment for your event. Transparent pricing and flexible rental periods."
+        path="/rentals"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">

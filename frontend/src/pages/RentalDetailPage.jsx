@@ -7,6 +7,7 @@ import { formatPrice } from '../lib/utils';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import QuoteForm from '../components/QuoteForm';
+import SEO from '../components/SEO';
 import { getItemById, rentals, inventory } from '../data/staticData';
 import RentalCard from '../components/RentalCard';
 import { useCart } from '../context/CartContext';
@@ -37,6 +38,12 @@ const RentalDetailPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="rental-detail-page">
+      <SEO
+        title={rental.name}
+        description={rental.short_description || rental.description?.slice(0, 160)}
+        image={rental.images?.[0]}
+        path={`/rentals/${rental.id}`}
+      />
       <div className="container-custom py-4">
         <Link
           to="/rentals"

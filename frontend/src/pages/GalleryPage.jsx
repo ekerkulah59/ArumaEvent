@@ -6,6 +6,7 @@ import {
   Dialog,
   DialogContent,
 } from '../components/ui/dialog';
+import SEO from '../components/SEO';
 import { gallery } from '../data/staticData';
 
 const GalleryPage = () => {
@@ -26,6 +27,11 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="gallery-page">
+      <SEO
+        title="Event Gallery"
+        description="See real weddings, corporate events, birthdays, and more. Inspiration from Aruma Events' past celebrations."
+        path="/gallery"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
