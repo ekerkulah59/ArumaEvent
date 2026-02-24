@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import BlogCard from '../components/BlogCard';
 import { Button } from '../components/ui/button';
+import SEO from '../components/SEO';
 import { blogPosts } from '../data/staticData';
 
 const BlogPage = () => {
@@ -15,6 +16,11 @@ const BlogPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="blog-page">
+      <SEO
+        title="Blog &amp; Event Inspiration"
+        description="Event ideas, wedding décor trends, planning tips, and inspiration from Aruma Events."
+        path="/blog"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">

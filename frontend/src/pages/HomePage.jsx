@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
 import HeroSlideshow from '../components/HeroSlideshow';
+import SEO from '../components/SEO';
 import { services, testimonials } from '../data/staticData';
 
 const HomePage = () => {
@@ -25,6 +26,11 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen" data-testid="home-page">
+      <SEO
+        title="Event Rental &amp; Décor — Weddings, Corporate, Celebrations"
+        description="Aruma Events brings your celebration to life. Premium event rental and décor: tents, tables, chairs, photo booths, and custom design for weddings, corporate events, and parties."
+        path="/"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center" data-testid="hero-section">
         {/* Background Slideshow */}

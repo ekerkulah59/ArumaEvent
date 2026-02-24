@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap (helps search engines discover all indexable pages)
+Sitemap: https://www.aurmarentals.com/sitemap.xml

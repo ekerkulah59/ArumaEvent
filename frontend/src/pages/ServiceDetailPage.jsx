@@ -7,6 +7,7 @@ import { formatPrice, serviceCategoryLabels } from '../lib/utils';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import QuoteForm from '../components/QuoteForm';
+import SEO from '../components/SEO';
 import { services } from '../data/staticData';
 import { useCart } from '../context/CartContext';
 
@@ -36,6 +37,11 @@ const ServiceDetailPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="service-detail-page">
+      <SEO
+        title={service.name}
+        description={service.short_description || service.description?.slice(0, 160)}
+        path={`/services/${service.id}`}
+      />
       <div className="container-custom py-4">
         <Link
           to="/services"

@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '../components/ui/accordion';
+import SEO from '../components/SEO';
 import { faq } from '../data/staticData';
 
 const FAQPage = () => {
@@ -27,6 +28,11 @@ const FAQPage = () => {
 
   return (
     <div className="min-h-screen pt-24" data-testid="faq-page">
+      <SEO
+        title="FAQ"
+        description="Frequently asked questions about Aruma Events: booking, rentals, services, and payment. Find answers before you book."
+        path="/faq"
+      />
       {/* Header */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
