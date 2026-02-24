@@ -6,12 +6,12 @@ import axios from 'axios';
  */
 
 // API Configuration - use same backend URL as lib/api for consistency
-// Timeout 45s to accommodate Render free-tier cold starts (~30-60s wake-up)
+// Timeout 90s — Render free-tier cold starts can take 60-90s
 const API_CONFIG = {
     baseURL: process.env.REACT_APP_BACKEND_URL
         ? `${process.env.REACT_APP_BACKEND_URL}/api`
         : process.env.REACT_APP_API_URL || 'http://localhost:8000/api',
-    timeout: 45000,
+    timeout: 90000,
     headers: {
         'Content-Type': 'application/json',
     },
@@ -89,6 +89,20 @@ const apiService = {
             return await apiClient.post(url, data, config);
         } catch (error) {
             throw error;
+        }
+    },
+
+    // POST with retry on timeout (for Render cold starts). Retries once after 5s.
+    postWithRetry: async (url, data, config = {}) => {
+        try {
+            return await apiClient.post(url, data, config);
+        } catch (err) {
+            const isTimeout = err?.message?.includes('too long') || err?.message?.includes('starting up');
+            if (isTimeout) {
+                await new Promise((r) => setTimeout(r, 5000));
+                return await apiClient.post(url, data, config);
+            }
+            throw err;
         }
     },
 
