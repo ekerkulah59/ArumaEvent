@@ -6,11 +6,12 @@ import axios from 'axios';
  */
 
 // API Configuration - use same backend URL as lib/api for consistency
+// Timeout 45s to accommodate Render free-tier cold starts (~30-60s wake-up)
 const API_CONFIG = {
     baseURL: process.env.REACT_APP_BACKEND_URL
         ? `${process.env.REACT_APP_BACKEND_URL}/api`
         : process.env.REACT_APP_API_URL || 'http://localhost:8000/api',
-    timeout: 10000,
+    timeout: 45000,
     headers: {
         'Content-Type': 'application/json',
     },
@@ -41,11 +42,15 @@ apiClient.interceptors.response.use(
     },
     (error) => {
         // Handle errors globally
+        const isTimeout = error.code === 'ECONNABORTED' || error.message?.includes('timeout');
         const isNetworkError = !error.response && (error.message === 'Network Error' || error.code === 'ERR_NETWORK');
         const baseURL = apiClient.defaults.baseURL || 'backend';
-        const errorMessage = isNetworkError
-            ? `Can't reach the server. Make sure the backend is running at ${baseURL}.`
-            : (error.response?.data?.message || error.message || 'An error occurred');
+        let errorMessage = error.response?.data?.message || error.message || 'An error occurred';
+        if (isTimeout) {
+            errorMessage = 'The request took too long. The server may be starting up — please try again in a few seconds.';
+        } else if (isNetworkError) {
+            errorMessage = `Can't reach the server. Make sure the backend is running at ${baseURL}.`;
+        }
 
         if (isNetworkError) {
             console.error('Network Error: Backend may be down or wrong URL. baseURL:', baseURL);
