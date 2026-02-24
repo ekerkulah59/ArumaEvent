@@ -15,6 +15,12 @@ app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
 
+@app.get("/")
+async def app_root():
+    """Root URL — visiting the deploy link directly."""
+    return {"message": "Aruma Events API", "docs": "/docs", "api": "/api"}
+
+
 # Models
 class ContactSubmission(BaseModel):
     """Contact form (general inquiry)."""

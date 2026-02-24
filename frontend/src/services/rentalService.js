@@ -50,7 +50,7 @@ const rentalService = {
                 rental_id: rentalData.itemId,
             };
 
-            const data = await apiService.post(API_ENDPOINTS.QUOTES, quotePayload);
+            const data = await apiService.postWithRetry(API_ENDPOINTS.QUOTES, quotePayload);
             return {
                 success: true,
                 message: 'Rental request submitted successfully',

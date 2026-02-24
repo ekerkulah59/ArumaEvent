@@ -69,7 +69,7 @@ const quoteService = {
                 rental_id: quoteData.rentalId ?? undefined,
                 items: quoteData.items ?? undefined,
             };
-            return await apiService.post(API_ENDPOINTS.QUOTES, payload);
+            return await apiService.postWithRetry(API_ENDPOINTS.QUOTES, payload);
         } catch (error) {
             console.error('Error submitting quote request:', error);
             throw error;

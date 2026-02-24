@@ -52,7 +52,7 @@ const contactService = {
                 subject: contactData.subject,
                 message: contactData.message,
             };
-            return await apiService.post(API_ENDPOINTS.CONTACT, payload);
+            return await apiService.postWithRetry(API_ENDPOINTS.CONTACT, payload);
         } catch (error) {
             console.error('Error submitting contact form:', error);
             throw error;
