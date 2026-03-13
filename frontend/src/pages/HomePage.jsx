@@ -372,7 +372,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials — uncomment once real client reviews are collected
       <section className="section-padding" data-testid="testimonials-section">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -412,6 +412,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="py-20 bg-primary relative overflow-hidden" data-testid="cta-section">
