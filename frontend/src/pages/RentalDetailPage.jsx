@@ -43,6 +43,15 @@ const RentalDetailPage = () => {
         description={rental.short_description || rental.description?.slice(0, 160)}
         image={rental.images?.[0]}
         path={`/rentals/${rental.id}`}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Rentals", "item": "https://www.aurmarentals.com/rentals" },
+            { "@type": "ListItem", "position": 3, "name": rental.name, "item": `https://www.aurmarentals.com/rentals/${rental.id}` }
+          ]
+        }}
       />
       <div className="container-custom py-4">
         <Link

@@ -36,6 +36,14 @@ const RentalsPage = () => {
         title="Event Rentals — Tents, Chairs, Tables, Photo Booths"
         description="Rent tents, tables, chairs, photo booths, and catering equipment for your event. Transparent pricing and flexible rental periods."
         path="/rentals"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Rentals", "item": "https://www.aurmarentals.com/rentals" }
+          ]
+        }}
       />
       {/* Header */}
       <section className="section-padding bg-muted">

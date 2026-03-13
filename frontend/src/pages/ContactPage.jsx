@@ -33,6 +33,14 @@ const ContactPage = () => {
         title="Contact Us"
         description="Get in touch with Aruma Events. Visit us in Magnolia, Delaware, or call and email for quotes and event planning."
         path="/contact"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.aurmarentals.com/contact" }
+          ]
+        }}
       />
       <section className="section-padding bg-muted">
         <div className="container-custom">

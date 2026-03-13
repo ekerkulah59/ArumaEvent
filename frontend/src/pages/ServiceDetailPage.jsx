@@ -41,6 +41,15 @@ const ServiceDetailPage = () => {
         title={service.name}
         description={service.short_description || service.description?.slice(0, 160)}
         path={`/services/${service.id}`}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.aurmarentals.com/services" },
+            { "@type": "ListItem", "position": 3, "name": service.name, "item": `https://www.aurmarentals.com/services/${service.id}` }
+          ]
+        }}
       />
       <div className="container-custom py-4">
         <Link

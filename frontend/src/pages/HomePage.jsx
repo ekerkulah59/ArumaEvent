@@ -27,9 +27,78 @@ const HomePage = () => {
   return (
     <div className="min-h-screen" data-testid="home-page">
       <SEO
-        title="Event Rental &amp; Décor — Weddings, Corporate, Celebrations"
-        description="Aruma Events brings your celebration to life. Premium event rental and décor: tents, tables, chairs, photo booths, and custom design for weddings, corporate events, and parties."
+        title="Event Rental & Décor for Weddings, Birthdays & Celebrations"
+        description="Premium event rental & décor for weddings, birthdays, and baby showers in Delaware. Tents, chairs, photo booths, and custom design. Request a quote."
         path="/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["LocalBusiness", "EventVenue"],
+            "@id": "https://www.aurmarentals.com/#business",
+            "name": "Aruma Events",
+            "description": "Premium event rental and décor for weddings, birthdays, baby showers, anniversaries, and graduations. Tents, tables, chairs, photo booths, and custom décor in Magnolia, Delaware.",
+            "url": "https://www.aurmarentals.com/",
+            "telephone": "+18352120574",
+            "email": "arumaeventsservices@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "53 Cilento Dr",
+              "addressLocality": "Magnolia",
+              "addressRegion": "DE",
+              "postalCode": "19962",
+              "addressCountry": "US"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "priceRange": "$$",
+            "areaServed": {
+              "@type": "State",
+              "name": "Delaware"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Event Rental & Décor Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Decoration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Birthday Party Decoration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Baby Shower Decoration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Anniversary Celebration Decoration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graduation Party Decoration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tent Rental" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Table and Chair Rental" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photo Booth Rental" } }
+              ]
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.aurmarentals.com/#website",
+            "name": "Aruma Events",
+            "url": "https://www.aurmarentals.com/",
+            "publisher": { "@id": "https://www.aurmarentals.com/#business" },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.aurmarentals.com/rentals?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]}
       />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center" data-testid="hero-section">
@@ -62,7 +131,7 @@ const HomePage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-body text-white/80 text-base md:text-lg mb-8 leading-relaxed"
             >
-              From your first gathering to the milestones your grandchildren will remember—we help you set the scene with premium décor and rentals so the moments you share become the stories you tell for years.
+              Delaware's premier event rental and décor company—serving weddings, birthdays, baby showers, and anniversaries across Magnolia, DE and surrounding areas. Premium tents, tables, chairs, photo booths, and custom design.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -270,7 +339,7 @@ const HomePage = () => {
                 What areas do you serve?
               </h3>
               <p className="font-body text-muted-foreground">
-                We proudly serve the greater metropolitan area and surrounding regions. Contact us to confirm service availability for your location.
+                We proudly serve Magnolia, Delaware and the greater Delaware region, including New Castle, Kent, and Sussex counties. Contact us to confirm availability for your exact location.
               </p>
             </motion.div>
 
@@ -304,7 +373,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials */}
-      {/* <section className="section-padding" data-testid="testimonials-section">
+      <section className="section-padding" data-testid="testimonials-section">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <motion.p
@@ -327,10 +396,10 @@ const HomePage = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-              {featuredTestimonials.map((testimonial, index) => (
-                <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
-              ))}
-            </div>
+            {featuredTestimonials.map((testimonial, index) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
+            ))}
+          </div>
 
           <div className="text-center mt-10">
             <Link
@@ -342,7 +411,7 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-primary relative overflow-hidden" data-testid="cta-section">

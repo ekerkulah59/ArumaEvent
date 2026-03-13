@@ -12,6 +12,14 @@ const TestimonialsPage = () => {
         title="Testimonials"
         description="Read what couples, families, and companies say about Aruma Events. Real reviews from real celebrations."
         path="/testimonials"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Testimonials", "item": "https://www.aurmarentals.com/testimonials" }
+          ]
+        }}
       />
       {/* Header */}
       <section className="section-padding bg-muted">

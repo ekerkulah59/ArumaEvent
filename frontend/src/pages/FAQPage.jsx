@@ -32,6 +32,14 @@ const FAQPage = () => {
         title="FAQ"
         description="Frequently asked questions about Aruma Events: booking, rentals, services, and payment. Find answers before you book."
         path="/faq"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.aurmarentals.com/faq" }
+          ]
+        }}
       />
       {/* Header */}
       <section className="section-padding bg-muted">
