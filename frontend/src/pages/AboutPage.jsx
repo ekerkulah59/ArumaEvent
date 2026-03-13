@@ -27,6 +27,14 @@ const AboutPage = () => {
         title="About Us"
         description="Meet Aruma Events — your Delaware event rental and décor partner. We bring quality tents, seating, photo booths, and custom design to every celebration."
         path="/about"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.aurmarentals.com/about" }
+          ]
+        }}
       />
       {/* Hero */}
       <section className="section-padding bg-muted">
@@ -43,7 +51,7 @@ const AboutPage = () => {
                 It Started at Our Family’s Table
               </h1>
               <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6">
-                Aurma Rental began around our family’s dining table—at my grandmother’s 80th birthday. Three generations laughed, shared stories, and made memories under a simple tent in the backyard. That evening we asked: “Why do some people miss out on celebrating because they don’t have the right setup?” We knew we had to do something about it.
+                Aruma Events began around our family’s dining table—at my grandmother’s 80th birthday. Three generations laughed, shared stories, and made memories under a simple tent in the backyard. That evening we asked: “Why do some people miss out on celebrating because they don’t have the right setup?” We knew we had to do something about it.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed">
                 We’re not just in the rental business; we’re in the business of bringing people together and creating the space where memories are made.
@@ -78,7 +86,7 @@ const AboutPage = () => {
             Life moves fast. Celebrations stop time.
           </h2>
           <p className="font-body text-muted-foreground leading-relaxed">
-            At Aurma Rental we believe every milestone deserves to be celebrated, and no one should have to compromise their vision because of logistics. We’re a family business serving families—your story matters to us.
+            At Aruma Events we believe every milestone deserves to be celebrated, and no one should have to compromise their vision because of logistics. We’re a family business serving families—your story matters to us.
           </p>
         </div>
       </section>
@@ -158,7 +166,7 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               <p className="font-body text-primary text-sm uppercase tracking-widest mb-2">
-                The Aurma Family Promise
+                The Aruma Events Promise
               </p>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-8">
                 How we show up for you

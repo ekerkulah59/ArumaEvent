@@ -16,23 +16,32 @@ const Footer = () => {
               and premium rentals. Your vision, our expertise.
             </p>
             <div className="flex gap-4 pt-2">
-              <a 
-                href="#" 
+              <a
+                href="https://www.instagram.com/arumaevents"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/60 hover:text-accent transition-colors"
+                aria-label="Aruma Events on Instagram"
                 data-testid="social-instagram"
               >
                 <Instagram size={20} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="https://www.facebook.com/arumaevents"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/60 hover:text-accent transition-colors"
+                aria-label="Aruma Events on Facebook"
                 data-testid="social-facebook"
               >
                 <Facebook size={20} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="https://twitter.com/arumaevents"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/60 hover:text-accent transition-colors"
+                aria-label="Aruma Events on X (Twitter)"
                 data-testid="social-twitter"
               >
                 <Twitter size={20} />
@@ -48,8 +57,8 @@ const Footer = () => {
                 { name: 'Services', path: '/services' },
                 { name: 'Rentals', path: '/rentals' },
                 { name: 'Gallery', path: '/gallery' },
-                // { name: 'Testimonials', path: '/testimonials' },
-                // { name: 'Blog', path: '/blog' },
+                { name: 'Testimonials', path: '/testimonials' },
+                { name: 'Blog', path: '/blog' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link 
@@ -130,6 +139,9 @@ const Footer = () => {
           <div className="flex gap-6">
             <Link to="/faq" className="font-body text-sm text-white/50 hover:text-white transition-colors" data-testid="footer-link-faq">
               FAQ
+            </Link>
+            <Link to="/privacy-policy" className="font-body text-sm text-white/50 hover:text-white transition-colors" data-testid="footer-link-privacy">
+              Privacy Policy
             </Link>
             <Link to="/terms-and-conditions" className="font-body text-sm text-white/50 hover:text-white transition-colors" data-testid="footer-link-terms">
               Terms & Conditions

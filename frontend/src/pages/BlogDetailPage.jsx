@@ -31,6 +31,15 @@ const BlogDetailPage = () => {
         description={post.excerpt}
         image={post.cover_image}
         path={`/blog/${post.slug}`}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aurmarentals.com/blog" },
+            { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.aurmarentals.com/blog/${post.slug}` }
+          ]
+        }}
       />
       <div className="relative h-[40vh] md:h-[50vh]">
         <img

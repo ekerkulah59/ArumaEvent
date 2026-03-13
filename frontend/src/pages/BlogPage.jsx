@@ -20,6 +20,14 @@ const BlogPage = () => {
         title="Blog &amp; Event Inspiration"
         description="Event ideas, wedding décor trends, planning tips, and inspiration from Aruma Events."
         path="/blog"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aurmarentals.com/blog" }
+          ]
+        }}
       />
       {/* Header */}
       <section className="section-padding bg-muted">

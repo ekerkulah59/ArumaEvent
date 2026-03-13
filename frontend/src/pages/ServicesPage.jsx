@@ -37,6 +37,14 @@ const ServicesPage = () => {
         title="Event Décor Services"
         description="Wedding décor, corporate events, birthdays, baby showers, and more. Custom event design and full-service décor from Aruma Events."
         path="/services"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.aurmarentals.com/services" }
+          ]
+        }}
       />
       {/* Header */}
       <section className="section-padding bg-muted">

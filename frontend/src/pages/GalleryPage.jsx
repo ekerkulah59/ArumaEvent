@@ -31,6 +31,14 @@ const GalleryPage = () => {
         title="Event Gallery"
         description="See real weddings, corporate events, birthdays, and more. Inspiration from Aruma Events' past celebrations."
         path="/gallery"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aurmarentals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.aurmarentals.com/gallery" }
+          ]
+        }}
       />
       {/* Header */}
       <section className="section-padding bg-muted">
